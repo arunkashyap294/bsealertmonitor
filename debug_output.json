@@ -1,0 +1,73 @@
+{
+  "query": {
+    "from": "2026-02-24 00:57",
+    "to": "2026-02-25 12:57",
+    "scripcode": "543942"
+  },
+  "total_rows_reported": [
+    {
+      "ROWCNT": 2
+    }
+  ],
+  "table_count": 2,
+  "items": [
+    {
+      "NEWSID": "60264965-94bd-47eb-84fb-d012b2ad1164",
+      "SCRIP_CD": 543942,
+      "XML_NAME": "ANN_543942_60264965-94BD-47EB-84FB-D012B2AD1164",
+      "NEWSSUB": "Notice Of The NCLT Convened Meeting Of The Unsecured Creditors Of The Bank To Be Held On March 28, 2026",
+      "DT_TM": "2026-02-24T20:07:46.99",
+      "NEWS_DT": "2026-02-24T20:07:46.99",
+      "CRITICALNEWS": 0,
+      "ANNOUNCEMENT_TYPE": "A",
+      "QUARTER_ID": null,
+      "FILESTATUS": "N    ",
+      "ATTACHMENTNAME": "a760003b-118d-4d49-a399-957c7f7fb879.pdf",
+      "MORE": "",
+      "HEADLINE": "Please find enclosed the Notice of NCLT Convened Meeting of the Unsecured Creditors of the Bank to be held on March 28, 2026.",
+      "CATEGORYNAME": "AGM/EGM",
+      "OLD": 1,
+      "RN": 1,
+      "PDFFLAG": 0,
+      "NSURL": "https://www.bseindia.com/stock-share-price/utkarsh-small-finance-bank-ltd/utkarshbnk/543942/",
+      "SLONGNAME": "Utkarsh Small Finance Bank Ltd",
+      "AGENDA_ID": 48,
+      "TotalPageCnt": 1,
+      "News_submission_dt": "2026-02-24T20:07:46",
+      "DissemDT": "2026-02-24T20:07:46.99",
+      "TimeDiff": "00:00:00",
+      "Fld_Attachsize": 27735551,
+      "SUBCATNAME": "Court Convened Meeting",
+      "AUDIO_VIDEO_FILE": null
+    },
+    {
+      "NEWSID": "48a2fe8b-f3c4-48f2-b4d2-2d0de419caf9",
+      "SCRIP_CD": 543942,
+      "XML_NAME": "ANN_543942_48A2FE8B-F3C4-48F2-B4D2-2D0DE419CAF9",
+      "NEWSSUB": "Notice Of The NCLT Convened Meeting Of The Equity Shareholders Of The Bank To Be Held On March 28, 2026",
+      "DT_TM": "2026-02-24T20:02:04.753",
+      "NEWS_DT": "2026-02-24T20:02:04.753",
+      "CRITICALNEWS": 0,
+      "ANNOUNCEMENT_TYPE": "A",
+      "QUARTER_ID": null,
+      "FILESTATUS": "N    ",
+      "ATTACHMENTNAME": "89c6c7a7-652c-4119-86fe-34b4e315630e.pdf",
+      "MORE": "",
+      "HEADLINE": "Please find enclosed the Notice of NCLT Convened Meeting of the Equity Shareholders of the Bank to be held on March 28, 2026.",
+      "CATEGORYNAME": "AGM/EGM",
+      "OLD": 1,
+      "RN": 1,
+      "PDFFLAG": 0,
+      "NSURL": "https://www.bseindia.com/stock-share-price/utkarsh-small-finance-bank-ltd/utkarshbnk/543942/",
+      "SLONGNAME": "Utkarsh Small Finance Bank Ltd",
+      "AGENDA_ID": 48,
+      "TotalPageCnt": 1,
+      "News_submission_dt": "2026-02-24T20:02:04",
+      "DissemDT": "2026-02-24T20:02:04.753",
+      "TimeDiff": "00:00:00",
+      "Fld_Attachsize": 25574999,
+      "SUBCATNAME": "Court Convened Meeting",
+      "AUDIO_VIDEO_FILE": null
+    }
+  ]
+}

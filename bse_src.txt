@@ -1,0 +1,93 @@
+    def announcements(
+        self,
+        page_no: int = 1,
+        from_date: datetime | None = None,
+        to_date: datetime | None = None,
+        segment: Literal["equity", "debt", "mf_etf"] = "equity",
+        scripcode: str | None = None,
+        category: str = "-1",
+        subcategory: str = "-1",
+    ) -> Dict[str, List[dict]]:
+        """
+        All corporate announcements
+
+        :param from_date: (Optional) From date.
+        :type from_date: datetime.datetime or None
+        :param to_date: (Optional) To date.
+        :type to_date: datetime.datetime or None
+        :param segment: Default ``equity``. One of ``equity``, ``debt`` or ``mf_etf``.
+        :type segment: str
+        :param category: (Optional) Filter announcements by category ex. ``Corp. Action``
+        :type category: str
+        :param subcategory: (Optional). Filter announcements by subcategory ex. ``Dividend``.
+        :type subcategory: str
+        :raise ValueError: if ``from_date`` is greater than ``to_date`` or ``subcategory`` argument is passed without ``category``
+        :raise TimeoutError: if request timed out with no response
+        :raise ConnectionError: in case of HTTP error or server returns error response.
+        :return: All announcements. `Sample response <https://github.com/BennyThadikaran/BseIndiaApi/blob/main/src/samples/announcements.json>`__
+        :rtype: dict[str, list[dict]]
+
+        Response is a dictionary containing ``Table`` and ``Table1`` keys.
+
+        - Response is paginated. Increment the ``page_no`` on every call, to get all announcements.
+
+        - ``Table`` is a list of dictionary announcements.
+
+        - ``data['Table1'][0]['ROWCNT']`` is an integer total of all announcements. Use this info, to increment ``page_no``
+
+        With no arguments, returns all announcements for current day and time by ``page_no``.
+
+        .. NOTE::
+            In most cases, it is faster and more bandwidth efficient to lookup
+            by ``scripcode``.
+            Unless you specifically need to download all announcements.
+            On a typical day, BSE could have 50+ pages and 2K+ announcements.
+
+        Provide ``from_date`` and ``to_date`` to return announcements in date range.
+        If not provided, the current date and time is considered.
+
+        Provide ``scripcode`` to return announcements for the specified stock.
+
+        Provide ``category`` and or ``subcategory`` to filter announcements.
+
+        - ``subcategory`` is specific to ``category``.
+        - ``category`` is required if ``subcategory`` is passed.
+
+        **Available Constants:**
+
+        - **segment**: ``bse.constants.SEGMENT``
+
+        - **category**: ``bse.constants.CATEGORY``
+        """
+
+        _type = "C" if segment == "equity" else ("D" if segment == "debt" else "M")
+
+        if not from_date:
+            from_date = datetime.now()
+
+        if not to_date:
+            to_date = datetime.now()
+
+        if from_date > to_date:
+            raise ValueError("'from_date' cannot be greater than 'to_date'")
+
+        if subcategory != "-1" and category == "-1":
+            raise ValueError(f"Specify a 'category' for subcategory: {subcategory}")
+
+        url = f"{self.api_url}/AnnSubCategoryGetData/w"
+
+        fmt = "%Y%m%d"
+
+        params = {
+            "pageno": page_no,
+            "strCat": category,
+            "subcategory": subcategory,
+            "strPrevDate": from_date.strftime(fmt),
+            "strToDate": to_date.strftime(fmt),
+            "strSearch": "P",
+            "strscrip": scripcode,
+            "strType": _type,
+        }
+
+        th.check()
+        return self.__req(url, params).json()
