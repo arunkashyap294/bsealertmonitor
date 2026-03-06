@@ -108,7 +108,7 @@ python monitor.py --list-companies
 ## Project Structure
 
 ```
-tijori_alerts/
+bsealertmonitor/
 ├── monitor.py            # Main entry point + scheduler
 ├── bse_scraper.py        # BSE India announcement fetcher + PDF downloader
 ├── summarizer.py         # Google Gemini document summarizer
