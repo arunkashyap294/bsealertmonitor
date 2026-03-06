@@ -31,14 +31,13 @@ companies:
  
 
   # Add more companies below:
-  - name: "Edelweiss Financial Services"
-    scripcode: "532922"
+
   #
   - name: "TCS"
     scripcode: "532540"
   #
-  # - name: "HDFC Bank"
-  #   scripcode: "500180"
+  - name: "HDFC Bank"
+    scripcode: "500180"
 
 # ============================================================
 # Summarization Settings
