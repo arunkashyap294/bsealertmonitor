@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from bse import BSE
 import json
 
-SCRIPCODE = "543942"  # Utkarsh Small Finance Bank
+SCRIPCODE = "500295"  # Vedanta
 
 from_dt = datetime.now() - timedelta(hours=36)
 to_dt = datetime.now()
