@@ -9,9 +9,9 @@ Usage: py get_telegram_chat_id.py
 import requests
 
 # ← Paste your Bot Token here (from @BotFather)
-BOT_TOKEN = "8762316720:AAG4zXbJdOX3Sr5TMyjukAwKicLO2Wk0-KY"
+BOT_TOKEN = "8912345678:AAG235zXbJdOX3Sr5T2wer56wKicLO2Wk0-KY"
 
-if BOT_TOKEN == "P8762316720:AAG4zXbJdOX3Sr5TMyjukAwKicLO2Wk0-KY":
+if BOT_TOKEN == "P8912345678:AAG235zXbJdOX3Sr5T2wer56wKicLO2Wk0-KY":
     print("❌ Please open this file and paste your Bot Token on the BOT_TOKEN line.")
     exit(1)
 
