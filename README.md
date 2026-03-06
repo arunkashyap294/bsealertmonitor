@@ -58,8 +58,8 @@ Edit `config.yaml` to track your desired stocks:
 interval_minutes: 10  # Check every 10 minutes
 
 companies:
-  - name: "Utkarsh Small Finance Bank"
-    scripcode: "543942"
+  - name: "Vedanta Ltd"
+    scripcode: "500295"
   - name: "Infosys"
     scripcode: "500209"
 ```
