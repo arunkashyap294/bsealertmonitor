@@ -20,8 +20,8 @@ Monitors BSE India for new corporate announcements and sends instant **Telegram*
 ### 1. Install Dependencies
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/tijori-alerts.git
-cd tijori-alerts
+git clone https://github.com/YOUR_USERNAME/bsealertmonitor.git
+cd bsealertmonitor
 
 # Create a virtual environment (Required on newer Linux/Ubuntu)
 python3 -m venv venv
